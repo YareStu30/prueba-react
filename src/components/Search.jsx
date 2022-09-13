@@ -36,7 +36,7 @@ const Search = ({ films, setFilms }) => {
           />
 
           <button>Enviar</button>
-          <a href="/">Volver a la lista</a>
+          <a href="/" className="navbar">Volver a la lista</a>
         </form>
         {films.length > 0 ? <h1 className="text-light"></h1> : null}
         <div className="row"></div>
