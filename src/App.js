@@ -14,7 +14,7 @@ function App() {
   }, []);
   return (
     <>
-      <Search films={films} setFilms={setFilms}/>
+      <Search films={films} setFilms={setFilms} />
       <div className="container">
         <MiApi films={films} />
       </div>
