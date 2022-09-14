@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import Search from "./components/Search";
 import MiApi from "./components/MiApi";
 
+
+
+
 function App() {
   const [films, setFilms] = useState([]);
   const fetchFilms = async () => {

@@ -34,10 +34,34 @@ const Search = ({ films, setFilms }) => {
             value={hunt}
             onChange={(e) => setHunt(e.target.value)}
           />
-
-          <button>Enviar</button>
-          <a href="/" className="navbar">Volver a la lista</a>
+          <button className="btn btn-warning m-2" >Enviar</button>
+          <a href="/" className="navbar">
+            Volver a la lista
+          </a>
         </form>
+        <div>
+          <button className="btn btn-warning m-2"
+            onClick={() => {
+              const sortedList = [...films].sort((a, b) =>
+                a.title > b.title ? 1 : a.title < b.title ? -1 : 0
+              );
+              setFilms(sortedList);
+            }}
+          >
+            Ascendente
+          </button>
+
+          <button className="btn btn-warning m-2"
+            onClick={() => {
+              const sortedList = [...films].sort((a, b) =>
+                a.title > b.title ? -1 : a.title < b.title ? 1 : 0
+              );
+              setFilms(sortedList);
+            }}
+          >
+            Descendente
+          </button>
+        </div>
         {films.length > 0 ? <h1 className="text-light"></h1> : null}
         <div className="row"></div>
       </div>

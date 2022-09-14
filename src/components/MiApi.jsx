@@ -2,12 +2,12 @@ import React from "react";
 
 const MiApi = ({ films }) => {
   return (
-    <div className="row">
+    <div className="row m-5 " >
       {films.map((item, index) => (
         <div key={index} className="col">
           <div className="card" style={{ maxWidth: "300px" }}>
             <img src={item.image} alt="" />
-            <p>Title: {item.title}</p>
+            <p>{item.title}</p>
             <p>{item.description}</p>
             <p>Director: {item.director}</p>
           </div>
