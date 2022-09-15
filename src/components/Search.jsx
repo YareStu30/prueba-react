@@ -24,8 +24,11 @@ const Search = ({ films, setFilms }) => {
     <nav className="navbar navbar-dark bg-info">
       <div className="container">
         <a className="navbar-brand text-uppercase" href="/">
-          Studios Ghibli
+          Studio Ghibli 
+          スタジオジブリ
         </a>
+        <br />
+        
         <form onSubmit={click}>
           <h3 className="text-light"> Busqueda por filme o director</h3>
           <input
@@ -34,13 +37,14 @@ const Search = ({ films, setFilms }) => {
             value={hunt}
             onChange={(e) => setHunt(e.target.value)}
           />
-          <button className="btn btn-warning m-2" >Enviar</button>
+          <button className="btn btn-warning m-2">Enviar</button>
           <a href="/" className="navbar">
             Volver a la lista
           </a>
         </form>
         <div>
-          <button className="btn btn-warning m-2"
+          <button
+            className="btn btn-warning m-2"
             onClick={() => {
               const sortedList = [...films].sort((a, b) =>
                 a.title > b.title ? 1 : a.title < b.title ? -1 : 0
@@ -51,7 +55,8 @@ const Search = ({ films, setFilms }) => {
             Ascendente
           </button>
 
-          <button className="btn btn-warning m-2"
+          <button
+            className="btn btn-warning m-2"
             onClick={() => {
               const sortedList = [...films].sort((a, b) =>
                 a.title > b.title ? -1 : a.title < b.title ? 1 : 0
