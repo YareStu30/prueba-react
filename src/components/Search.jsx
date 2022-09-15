@@ -24,11 +24,10 @@ const Search = ({ films, setFilms }) => {
     <nav className="navbar navbar-dark bg-info">
       <div className="container">
         <a className="navbar-brand text-uppercase" href="/">
-          Studio Ghibli 
-          スタジオジブリ
+          Studio Ghibli スタジオジブリ
         </a>
         <br />
-        
+
         <form onSubmit={click}>
           <h3 className="text-light"> Busqueda por filme o director</h3>
           <input
@@ -36,6 +35,7 @@ const Search = ({ films, setFilms }) => {
             placeholder="Búsqueda"
             value={hunt}
             onChange={(e) => setHunt(e.target.value)}
+            className="seeker"
           />
           <button className="btn btn-warning m-2">Enviar</button>
           <a href="/" className="navbar">
